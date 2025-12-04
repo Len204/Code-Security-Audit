@@ -47,7 +47,7 @@ function validateForm(data) {
     if (isNaN(donationAmount) || donationAmount < 0) {
         return {
             isValid: false,
-            message: 'Donation amount must be a positive number.'
+            message: 'Donation amount must be a positive number!'
         };  
     }
     return { isValid: true};
