@@ -160,7 +160,7 @@ describe('Donation Tracker Component', () => {
                 charityName: 'Charity A',
                 donationAmount: 100,
                 donationDate: '2023-10-01',
-                donorComment: 'Great job.'
+                donorComment: 'Great job!.'
             };
 
             addDonationToLS(donationData);

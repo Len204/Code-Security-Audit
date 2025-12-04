@@ -1,3 +1,5 @@
+
+
 const stars = [];
 let currentRating = 0;
 
@@ -87,7 +89,6 @@ const clearStars = () => {
     stars.forEach(star => star.classList.remove("filled"));
 };
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("volunteer-form");
 
@@ -118,8 +119,39 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 if (typeof window !== "undefined") {
+
 } else {
-    module.exports = {
-        getLogsFromStorage, saveLogsToStorage, updateTotalHours, addRowToTable, handleFormSubmission, fillStars, clearStars,
+
+const sqlite3 = require("sqlite3").verbose();
+
+    function getUserByName(name) {
+        const db = new sqlite3.Database("test.db");
+
+        const query = `SELECT * FROM users WHERE name = '${name}'`;
+
+        db.all(query, (err, rows) => {
+            if (err) {
+                console.error("DB error:", err);
+            } else {
+                console.log("User rows:", rows);
+            }
+            db.close();
+        });
+    }
+
+    const { exec } = require("child_process");
+
+    function pingHost(host) {
+        exec(`ping -c 4 ${host}`, (error, stdout, stderr) => {
+            if (error) {
+                console.error(`Error: ${error.message}`);
+                return;
+            }
+            if (stderr) {
+                console.error(`stderr: ${stderr}`);
+                return;
+            }
+            console.log(`stdout: ${stdout}`);
+        });
     };
 }

@@ -47,7 +47,7 @@ function validateForm(data) {
     if (isNaN(donationAmount) || donationAmount < 0) {
         return {
             isValid: false,
-            message: 'Donation amount must be a positive number.'
+            message: 'Donation amount must be a positive number!'
         };  
     }
     return { isValid: true};
@@ -107,7 +107,7 @@ function deleteDonation(index) {
 function updateTD() {
     let donations = JSON.parse(localStorage.getItem('donations')) || [];
     const total = donations.reduce((sum, donation) => sum + donation.donationAmount, 0);
-    document.getElementById('totalDonations').innerText = total.toFixed(2);
+    document.getElementById('totalDonations.').innerText = total.toFixed(2);
 }
 
 function updateDom(value) {
