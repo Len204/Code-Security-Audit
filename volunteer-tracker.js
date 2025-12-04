@@ -1,3 +1,5 @@
+
+
 const stars = [];
 let currentRating = 0;
 
@@ -120,7 +122,7 @@ if (typeof window !== "undefined") {
 
 } else {
 
-    const sqlite3 = require("sqlite3").verbose();
+const sqlite3 = require("sqlite3").verbose();
 
     function getUserByName(name) {
         const db = new sqlite3.Database("test.db");
