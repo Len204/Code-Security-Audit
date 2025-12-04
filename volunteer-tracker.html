@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Volunteer Hours Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Volunteer Hours Tracker</h1>
+        <nav class="navbar">
+        </nav>
+    </header>
+    <main>
+        <section>
+        <form id="volunteer-form">
+            <label for="charity-name">Charity Name:</label>
+            <input type="text" id="charity-name">
+
+            <label for="hoursVolunteered">Hours Volunteered:</label>
+            <input type="number" id="hoursVolunteered" name="hoursVolunteered">
+
+            <label for="date">Volunteering Date Occured:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="expRating">Volunteer Experience Rating (1-5):</label>
+            <button class="star">&#9734;</button>
+            <button class="star">&#9734;</button>
+            <button class="star">&#9734;</button>
+            <button class="star">&#9734;</button>
+            <button class="star">&#9734;</button>
+        </section>
+
+            <section>
+                <h2>Volunteer Logs</h2>
+                <table id="volunteer-table" border="5">
+                    <thead>
+                        <tr>
+                            <th>Charity Name</th>
+                            <th>Hours Volunteered</th>
+                            <th>Date</th>
+                            <th>Experience Rating</th>
+                            <th>Delete Log</th>
+                        </tr>
+                    </thead>
+                    <tbody id="volunteer-table-body"></tbody>    
+                </table>
+                <p id="total-hours">Total Hours Volunteered: 0</p>
+            </section>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div id="error-message"></div>
+    </main>
+    <script src="volunteer-tracker.js"></script>
+</body>
+</html>

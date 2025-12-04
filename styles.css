@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Merriweather', serif;
+  background-color: #cdb4db;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+
+header {
+  background-color: #ffafcc;
+  color: #000000;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-size: 1.5rem;
+}
+
+main {
+  padding: 2rem;
+  margin-top: 6rem;
+  width: 90%;
+  max-width: 900px;
+  border: 3px dashed #6d6875;
+  border-radius: 20px;
+  background-color: #ffafcc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+
+.star-rating {
+  display: flex;
+  gap: 10rem;
+  user-select: none;
+  width: 100%;
+}
+
+.star {
+  display: inline-flex;
+  width: auto;
+  margin: 0;
+  background-color: unset;
+  border: none;
+  color: red;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 4;
+}
+
+.star:hover,
+.star.filled {
+  cursor: pointer;
+  color: gold;
+}
+
+button[type="submit"] {
+  padding: 0.75rem;
+  background-color: #333;
+  color: #a2d2ff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #ffc8dd;
+}
+
+#error-message {
+  color: red;
+  margin-top: 1rem;
+}
+
+.terms {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.terms input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.terms label {
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+.terms a {
+  color: #bde0fe; 
+  text-decoration: underline;
+}
+
+.terms a:hover {
+  color: #ff69b4; 
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+thead {
+  padding: auto;
+  text-align: center;
+}
+
+th {
+  padding: auto;
+  width: 10%;
+  text-align: center;
+  background-color: #ffafcc;
+}
+
+iframe {
+  height: 500px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+display: block;
+margin: 0 auto;
+padding: 0.75rem;
+background-color: #333;
+color: #a2d2ff;
+border: none;
+border-radius: 4px;
+font-size: 1rem;
+cursor: pointer;
+transition: background-color 0.5s;
+width: 80%;
+}
+
+@media (max-width: 600px) {
+main {
+  padding: 1rem;
+}
+
+button {
+  width: 100%;
+}
+}

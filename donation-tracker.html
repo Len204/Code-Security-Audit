@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Donation Tracker</h1>
+        <nav>
+            <!-- Possible Nav links -->
+        </nav>
+    </header>
+    <main>
+        <h2>Add a New Donation</h2>
+        <section>
+        <form id="donationForm">
+            <label for="charityName">Charity Name:</label>
+            <input type="text" id="charityName">
+
+            <label for="donationAmount">Donation Amount:</label>
+            <input type="number" id="donationAmount">
+
+            <label for="donationDate">Date of Donation:</label>
+            <input type="date" id="donationDate">
+
+            <label for="donorComment">Donor Comment:</label>
+            <textarea id="donorComment"></textarea>
+
+            <button type="submit">Submit Donation</button>
+        </form>
+        </section>
+
+        <div id="errorMessage"></div>
+
+        <section>
+        <h2>Current Donations</h2>
+        <table id="donationTable" border="5">
+            <thead>
+                <tr>
+                    <th>Charity Name</th>
+                    <th>Donation Amount</th>
+                    <th>Date</th>
+                    <th>Donor's Comment</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>  
+            <tbody id="donationTableBody"></tbody>    
+        </table>
+
+        <h3>Total Donations Given: <span id="totalDonations">0.00</span></h3>
+        </section>
+    </main>
+    <script src="donation-tracker.js"></script>
+</body>
+</html>
